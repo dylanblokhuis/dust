@@ -1,0 +1,5 @@
+{
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.path": "/home/dylan/.deno/bin/deno"
+}
