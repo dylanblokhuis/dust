@@ -1,4 +1,4 @@
-/** @jsx React.createElement */
+/** @jsx h */
 // deno-lint-ignore-file
 import { type Dust } from "./core/mod.ts";
 
@@ -15,4 +15,4 @@ declare global {
   var Dust: Dust;
 }
 
-export {};
+export { };
