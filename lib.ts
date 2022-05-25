@@ -1,4 +1,3 @@
-/// <reference path="./ns.d.ts" />
 import {
   addBaseTemplateRoute,
   admin,

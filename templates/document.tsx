@@ -1,6 +1,3 @@
-/** @jsx h */
-import { createElement as h } from "react";
-
 export default function Document() {
   return (
     <html lang="en">
@@ -11,7 +8,7 @@ export default function Document() {
       </head>
       <body>
         <div className="text-lg font-bold p-4">
-          Hello World!
+          Hello World!!
         </div>
       </body>
     </html>

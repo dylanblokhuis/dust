@@ -1,5 +1,3 @@
-/// <reference path="../../ns.d.ts" />
-
 const plugin: Dust.Plugin = () => ({
   name: "another",
   init,

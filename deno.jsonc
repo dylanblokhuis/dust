@@ -1,7 +1,28 @@
 {
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "https://esm.sh/react@18.1.0",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable",
+      "dom.extras",
+      "deno.ns"
+    ],
+    "types": ["./ns.d.ts"]
+  },
   "tasks": {
-    "dev": "deno run --allow-net --allow-read --watch server.ts",
+    "dev": "deno run --allow-net --allow-read --watch --no-check server.ts",
     "serve": "deno run --allow-net --allow-read server.ts"
   },
-  "importMap": "./import_map.json"
+  "importMap": "./import_map.json",
+  "fmt": {
+    "options": {
+      "lineWidth": 120
+    },
+    "files": {
+      "exclude": [".vscode"]
+    }
+  },
+  "lint": {}
 }
