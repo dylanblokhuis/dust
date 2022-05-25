@@ -1,5 +1,5 @@
-import React from "react"
-import Menu from "./menu.tsx"
+import React from "react";
+import Menu from "./menu.tsx";
 
 export default function Document() {
   return (
@@ -13,5 +13,5 @@ export default function Document() {
         <Menu />
       </body>
     </html>
-  )
+  );
 }

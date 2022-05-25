@@ -1,12 +1,19 @@
 /// <reference path="./ns.d.ts" />
-import { Menu, Plugins, Router, addBaseTemplateRoute, admin, css } from "./core/mod.ts";
+import {
+  addBaseTemplateRoute,
+  admin,
+  css,
+  Menu,
+  Plugins,
+  Router,
+} from "./core/mod.ts";
 
 export async function handleRequest(request: Request) {
   globalThis.Dust = {
     menu: new Menu(),
     plugins: new Plugins(),
-    router: new Router()
-  }
+    router: new Router(),
+  };
 
   css.init();
   admin.init();
@@ -19,9 +26,9 @@ export async function handleRequest(request: Request) {
 
   if (!route) {
     return new Response(null, {
-      status: 404
-    })
+      status: 404,
+    });
   }
 
-  return route.handler(request)
+  return route.handler(request);
 }

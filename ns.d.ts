@@ -5,14 +5,14 @@ import { type Dust } from "./core/mod.ts";
 declare global {
   namespace Dust {
     type ActivePlugin = {
-      name: string
-      init: () => void
-    }
+      name: string;
+      init: () => void;
+    };
 
-    type Plugin = () => ActivePlugin
+    type Plugin = () => ActivePlugin;
   }
 
-  var Dust: Dust
+  var Dust: Dust;
 }
 
-export { }
+export {};
