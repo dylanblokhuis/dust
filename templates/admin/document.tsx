@@ -1,4 +1,5 @@
-import React from "react";
+/** @jsx h */
+import h from "react";
 import Menu from "./menu.tsx";
 
 export default function Document() {
