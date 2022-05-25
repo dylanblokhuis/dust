@@ -1,12 +1,13 @@
 /// <reference path="../../ns.d.ts" />
 
-const plugin: Dust.Plugin = {
-  name: "something"
-}
+const plugin: Dust.Plugin = () => ({
+  name: "something",
+  init
+})
 
-export function init() {
+function init() {
   Dust.router.add({
-    path: "/",
+    path: "/something",
     handler: (request: Request) => {
       return new Response("Something plugin. :)")
     }

@@ -1,16 +1,15 @@
+/** @jsx React.createElement */
 // deno-lint-ignore-file
 import { type Dust } from "./core/mod.ts";
 
 declare global {
   namespace Dust {
-    interface Plugin {
+    type ActivePlugin = {
       name: string
-    }
-
-    interface PluginModule {
-      default: Plugin
       init: () => void
     }
+
+    type Plugin = () => ActivePlugin
   }
 
   var Dust: Dust

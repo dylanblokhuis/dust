@@ -2,7 +2,7 @@ import { globToRegExp } from "https://deno.land/std@0.140.0/path/glob.ts";
 
 export interface Route {
   path: string,
-  handler: (request: Request) => Response
+  handler: (request: Request) => Response | Promise<Response>
 }
 
 class Router {
@@ -18,6 +18,9 @@ class Router {
   }
 
   add(route: Route): void {
+    if (this.routes.find(existingRoute => existingRoute.path === route.path)) {
+      throw new Error("A route already exists with this path")
+    }
     this.routes.push(route)
   }
 }

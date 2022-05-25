@@ -1,5 +1,5 @@
 /// <reference path="./ns.d.ts" />
-import { Menu, Plugins, Router } from "./core/mod.ts";
+import { Menu, Plugins, Router, addBaseTemplateRoute, admin, css } from "./core/mod.ts";
 
 export async function handleRequest(request: Request) {
   globalThis.Dust = {
@@ -8,7 +8,11 @@ export async function handleRequest(request: Request) {
     router: new Router()
   }
 
+  css.init();
+  admin.init();
+
   await Dust.plugins.load();
+  addBaseTemplateRoute();
 
   const url = new URL(request.url);
   const route = Dust.router.match(url);
