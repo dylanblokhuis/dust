@@ -1,5 +1,5 @@
 /** @jsx h */
-import h from "react";
+import { createElement as h } from "react";
 import Menu from "./menu.tsx";
 
 export default function Document() {

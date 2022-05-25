@@ -1,5 +1,5 @@
 /** @jsx h */
-import h from "react";
+import { createElement as h } from "react";
 
 export default function Document() {
   return (
