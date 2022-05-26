@@ -1,3 +1,4 @@
+// temporary unocss until tailwind adds deno support
 import { createGenerator } from "https://esm.sh/@unocss/core@0.34.1";
 import presetWind from "https://esm.sh/@unocss/preset-wind@0.34.1";
 import { walk } from "https://deno.land/std@0.140.0/fs/mod.ts";

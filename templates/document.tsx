@@ -11,7 +11,7 @@ export default function Document({ hmr }: DocumentProps) {
         {hmr && <script src="/hmr.js"></script>}
       </head>
       <body>
-        <div className="text-lg font-bold p-4">
+        <div className="text-lg font-bold p-4 text-red-500">
           Hello World!
         </div>
       </body>

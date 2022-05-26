@@ -1,13 +1,18 @@
 import Router from "./router.ts";
+import { Admin, Menu } from "./admin/mod.ts"
 
 export interface Dust {
-  router: Router;
   isDev: boolean;
+  router: Router;
+  admin: Admin;
 }
 
 export const namespace: Dust = {
+  isDev: Deno.args.includes("--dev"),
   router: new Router(),
-  isDev: Deno.args.includes("--dev")
+  admin: {
+    menu: new Menu()
+  }
 }
 
 export * as plugins from "./plugins.ts"
