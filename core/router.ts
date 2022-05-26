@@ -1,4 +1,4 @@
-import { globToRegExp } from "https://deno.land/std@0.140.0/path/glob.ts";
+import { pathToRegexp } from "https://deno.land/x/path_to_regexp@v6.2.0/index.ts";
 
 export interface Route {
   path: string;
@@ -10,7 +10,7 @@ class Router {
 
   match(url: URL): Route | undefined {
     const route = this.routes.find((route) => {
-      const regexp = globToRegExp(route.path);
+      const regexp = pathToRegexp(route.path);
       return regexp.test(url.pathname);
     });
 

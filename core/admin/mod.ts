@@ -5,11 +5,7 @@ import { createElement } from "react";
 export function init() {
   Dust.router.add({
     handler: handleAdminRequest,
-    path: "/admin",
-  });
-  Dust.router.add({
-    handler: handleAdminRequest,
-    path: "/admin/**/*",
+    path: "/admin(.*)",
   });
 }
 

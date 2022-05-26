@@ -4,7 +4,7 @@ import Document from "../templates/document.tsx";
 
 export function init() {
   Dust.router.add({
-    path: "/*",
+    path: "/(.*)",
     handler: () => {
       const el = createElement(Document, {
         hmr: Dust.isDev,
