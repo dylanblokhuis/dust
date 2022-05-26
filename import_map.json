@@ -3,6 +3,7 @@
     "react": "https://esm.sh/v82/react@18.1.0",
     "react/jsx-runtime": "https://esm.sh/v82/react@18.1.0/jsx-runtime",
     "react-dom": "https://esm.sh/v82/react-dom@18.1.0",
-    "react-dom/server": "https://esm.sh/v82/react-dom@18.1.0/server"
+    "react-dom/server": "https://esm.sh/v82/react-dom@18.1.0/server",
+    "denodb": "https://deno.land/x/denodb@v1.0.40/mod.ts"
   }
 }

@@ -1,5 +1,5 @@
 interface DocumentProps {
-  hmr: boolean
+  hmr: boolean;
 }
 export default function Document({ hmr }: DocumentProps) {
   return (

@@ -14,7 +14,7 @@
     "types": ["./ns.d.ts"]
   },
   "tasks": {
-    "dev": "deno run --allow-net --allow-read --watch --config=./deno.jsonc --no-check server.ts --dev",
+    "dev": "deno run --allow-net --allow-read --allow-write=./db.sql,./db.sql-journal --allow-env --watch --config=./deno.jsonc --no-check server.ts --dev",
     "serve": "deno run --allow-net --allow-read --config=./deno.jsonc server.ts"
   },
   "importMap": "./import_map.json",

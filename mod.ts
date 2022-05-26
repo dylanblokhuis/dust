@@ -4,7 +4,8 @@ import {
   admin,
   css,
   hmr,
-  namespace
+  namespace,
+  db
 } from "./core/mod.ts";
 
 globalThis.Dust = namespace;
@@ -15,7 +16,8 @@ if (Dust.isDev) {
 css.init();
 admin.init();
 plugins.init();
-templating.init()
+templating.init();
+db.sync();
 
 export function handleRequest(request: Request) {
   const url = new URL(request.url);

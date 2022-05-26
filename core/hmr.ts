@@ -46,8 +46,8 @@ export function routes() {
           "Content-Type": "application/javascript",
         },
       });
-    }
-  })
+    },
+  });
 
   Dust.router.add({
     path: "/hmr",
@@ -59,8 +59,8 @@ export function routes() {
       };
 
       return response;
-    }
-  })
+    },
+  });
 }
 
 export async function watch(directory: string) {
@@ -75,7 +75,7 @@ export async function watch(directory: string) {
             HMR_SOCKETS.forEach((socket) => {
               socket.send("refresh");
             });
-          }, 200)
+          }, 200);
         }
       }
     }

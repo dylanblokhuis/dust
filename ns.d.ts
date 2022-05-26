@@ -1,6 +1,6 @@
 // deno-lint-ignore-file
 import { type Dust } from "./core/mod.ts";
-import type React from "react"
+import type React from "react";
 
 declare global {
   namespace Dust {
@@ -15,4 +15,4 @@ declare global {
   var Dust: Dust;
 }
 
-export { };
+export {};
