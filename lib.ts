@@ -1,25 +1,23 @@
 import {
-  addBaseTemplateRoute,
+  plugins,
+  templating,
   admin,
   css,
-  Menu,
-  Plugins,
-  Router,
+  hmr,
+  namespace
 } from "./core/mod.ts";
 
-export async function handleRequest(request: Request) {
-  globalThis.Dust = {
-    menu: new Menu(),
-    plugins: new Plugins(),
-    router: new Router(),
-  };
+globalThis.Dust = namespace;
+if (Dust.isDev) {
+  hmr.routes();
+  hmr.watch("./templates");
+}
+css.init();
+admin.init();
+plugins.init();
+templating.init()
 
-  css.init();
-  admin.init();
-
-  await Dust.plugins.load();
-  addBaseTemplateRoute();
-
+export function handleRequest(request: Request) {
   const url = new URL(request.url);
   const route = Dust.router.match(url);
 

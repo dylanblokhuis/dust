@@ -21,7 +21,7 @@ class Router {
     if (
       this.routes.find((existingRoute) => existingRoute.path === route.path)
     ) {
-      throw new Error("A route already exists with this path");
+      throw new Error("A route already exists with this path: " + route.path);
     }
     this.routes.push(route);
   }
